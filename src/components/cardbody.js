@@ -1,7 +1,13 @@
 import React from "react";
+
+import Card from "../components/card"
+
 import nick from "../assets/image/nick.jpg";
 import digital from "../assets/image/digital.jpg"
 import portfolio from "../assets/image/portfolio.jpg"
+import {Container, Row } from "react-bootstrap";
+
+
 
 class CardBody extends React.Component {
     constructor(props) {
@@ -40,9 +46,35 @@ class CardBody extends React.Component {
         }
     }
 
+    handleCardClick =(id, Card) => {
+        let items =[...this.state.items];
+
+        items[id].selected = items[id].selected ? false: true;
+
+        items.forEach(item => {
+            if (item.id !== id) {
+            item.selected = false;
+            }
+        });
+        this.setState({
+            items
+        });
+    }
+
+    makeItems = (items) => {
+        return items.map(item => {
+            return <Card item={item} onClick={(e => this.handleCardClick(item.id, e))} key={item.Id} />
+        })
+    }
+
     render(){
         return(
-            <p>CardBody</p>
+            <Container fluid={true}>
+                <Row className="justify-content-around" >
+                    {this.makeItems(this.state.items)}
+
+                </Row>
+            </Container>
         );
     }
 }
