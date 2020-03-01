@@ -13,8 +13,7 @@ function Footer(){
                     
                     
                     </Col>
-                    <a class="nav-link" href="https://github.com/Nick-code92"> Github </a>
-                    <a class="nav-link" href="https://linkedin.com/in/nikddimos-gebregiorgis"> Linkedin </a>
+    
                     <Col className="p-0 d-flex justify-content-end " md="3">
                     This is my Portfolio
                     </Col>
