@@ -4,7 +4,10 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Navbar";
 
-import Footer from "./components/Footer"
+import Footer from "./components/Footer";
+import Portfolio from "./pages/Portfolio";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 
 
 class App extends React.Component {
@@ -46,12 +49,15 @@ class App extends React.Component {
               <Link className="nav-link" to="/">Portfolio</Link>
               <Link className="nav-link" to="/about">About</Link>
               <Link className="nav-link" to="/contact">Contact</Link>
+
             </Nav>
            </Navbar.Collapse>
          </Navbar>
-            <Footer>
+         <Route path="/" exact render={()=> <Portfolio title={this.state.portfolio.title} subTitle={this.state.portfolio} text={this.state.portfolio} />} />
+         <Route path="/About" exact render={()=> <About title={this.state.about.title} />} />
 
-            </Footer>
+         <Route path="/Contact" exact render={()=> <Contact title={this.state.contact.title} />} />
+            <Footer/>
          
        </Container>
 
