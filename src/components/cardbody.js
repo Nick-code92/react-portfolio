@@ -1,7 +1,7 @@
 import React from "react";
-import nick from "../assets/images/nick"
-import digital from "../assets/images/digital-portfolio"
-import portfolio from "../assets/images/portfolio"
+import nick from "../assets/image/nick.jpg";
+import digital from "../assets/image/digital.jpg"
+import portfolio from "../assets/image/portfolio.jpg"
 
 class CardBody extends React.Component {
     constructor(props) {
@@ -12,7 +12,7 @@ class CardBody extends React.Component {
                     id: 0, 
                     title: "Project",
                     SubTitle: "This is a boot-camp class project ",
-                    imgSrc: nick,
+                     imgSrc: nick,
                     link: "https://limitless-refuge-47363.herokuapp.com/",
                     selected: false
                 },
