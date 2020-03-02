@@ -47,6 +47,8 @@ class CardBody extends React.Component {
     }
 
     handleCardClick =(id, Card) => {
+        console.log(id);
+
         let items =[...this.state.items];
 
         items[id].selected = items[id].selected ? false: true;
@@ -63,7 +65,7 @@ class CardBody extends React.Component {
 
     makeItems = (items) => {
         return items.map(item => {
-            return <Card item={item} onClick={(e => this.handleCardClick(item.id, e))} key={item.Id} />
+            return <Card item={item} Click={(e => this.handleCardClick(item.id, e))} key={item.id} />
         })
     }
 
