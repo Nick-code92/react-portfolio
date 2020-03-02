@@ -1,6 +1,6 @@
 import React from "react";
 import Hero from "../components/Hero";
-import Content from "../components/content";
+import Content from "../components/Content";
 
 
 import Form from "react-bootstrap/Form";
