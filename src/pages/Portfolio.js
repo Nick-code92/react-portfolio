@@ -1,7 +1,7 @@
 import React from "react";
 
-import Hero from "../components/Heros"
-import CardBody from "../components/Cardbodys"
+import Hero from "../components/Hero"
+import CardBody from "../components/Cardbody"
 
 function Portfolio(props){
     return(
