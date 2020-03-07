@@ -31,7 +31,7 @@ class CardBody extends React.Component {
                     selected: false
                 },
                 {
-                    id: 0, 
+                    id: 2, 
                     title: "Github",
                     SubTitle: "This is my github link with other projects ",
                     imgSrc: portfolio,
@@ -65,7 +65,7 @@ class CardBody extends React.Component {
 
     makeItems = (items) => {
         return items.map(item => {
-            return <Card item={item} Click={(e => this.handleCardClick(item.id, e))} key={item.id} />
+             return <Card item={item} click={(e => this.handleCardClick(item.id, e))} key={item.id} />
         })
     }
 
