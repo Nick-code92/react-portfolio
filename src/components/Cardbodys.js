@@ -1,6 +1,6 @@
 import React from "react";
 
-import Card from "./Card"
+import Card from "./Cards"
 
 import nick from "../assets/image/nick.jpg";
 import digital from "../assets/image/digital.jpg"
